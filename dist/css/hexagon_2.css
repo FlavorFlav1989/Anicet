@@ -1,0 +1,78 @@
+:root {
+  --hexa-width-2: 0px;
+  --hexa-height-2: 0px; /*width / sqrt(3)*/
+  --hexa-margin-2: 0px; /*height / 2*/
+  --hexa-margin-negate-2: 0px; /*height / 2*/
+  --hexa-background-size-2: 0px; /*height * 2*/
+  --hexa-cap-width-2: 0px; /*width / sqrt(2)*/
+  --scale-y: 0.5774; /*Math.tan(30 * Math.PI/180)*/
+  --invert-scale-y: 1.7321; /*1 / scale_y*/
+  --hexa-left-2: 0px; /*(width - cap_width) / 2*/
+  --hexa-offset-2: 0px; /*width / sqrt(2) /2*/
+}
+
+.hexagon_2 {
+  position: relative;
+  width: var(--hexa-width-2); 
+  height: var(--hexa-height-2);
+  margin: var(--hexa-margin-2) 0;
+  background-size: auto var(--hexa-background-size-2);
+  background-position: center;
+}
+
+.hexTop_2,
+.hexBottom_2 {
+  position: absolute;
+  z-index: 1;
+  width: var(--hexa-cap-width-2);
+  height: var(--hexa-cap-width-2);
+  overflow: hidden;
+  -webkit-transform: scaleY(var(--scale-y)) rotate(-45deg);
+  -ms-transform: scaleY(var(--scale-y)) rotate(-45deg);
+  transform: scaleY(var(--scale-y)) rotate(-45deg);
+  background: inherit;
+  left: var(--hexa-left-2);
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop_2:after,
+.hexBottom_2:after {
+  content: "";
+  position: absolute;
+  width: var(--hexa-width-2);
+  height: var(--hexa-height-2);
+  -webkit-transform:  rotate(45deg) scaleY(var(--invert-scale-y)) translateY(var(--hexa-margin-negate-2));
+  -ms-transform:      rotate(45deg) scaleY(var(--invert-scale-y)) translateY(var(--hexa-margin-negate-2));
+  transform:          rotate(45deg) scaleY(var(--invert-scale-y)) translateY(var(--hexa-margin-negate-2));
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop_2 {
+  top: var(--hexa-offset-2);
+}
+
+.hexTop_2:after {
+  background-position: center top;
+}
+
+.hexBottom_2 {
+  bottom: var(--hexa-offset-2);
+}
+
+.hexBottom_2:after {
+  background-position: center bottom;
+}
+
+.hexagon_2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--hexa-width-2);
+  height: var(--hexa-height-2);
+  z-index: 2;
+  background: inherit;
+}

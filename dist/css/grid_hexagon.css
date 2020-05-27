@@ -1,0 +1,19 @@
+div.grid-container {
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 100vw;
+	font-size: 0; 
+}
+div.grid-container .hexagon { 
+	transition: .8s opacity;
+}
+div.grid-container:hover .hexagon {
+	opacity: 0.3;
+}
+div.grid-container:hover .hexagon:hover {
+	opacity: 1;
+}

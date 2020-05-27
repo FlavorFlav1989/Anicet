@@ -1,0 +1,86 @@
+:root {
+  --hexa-width-1: 0px;
+  --hexa-height-1: 0px; /*width / sqrt(3)*/
+  --hexa-margin-1: 0px; /*height / 2*/
+  --hexa-margin-negate-1: 0px; /*height / 2*/
+  --hexa-background-size-1: 0px; /*height * 2*/
+  --hexa-cap-width-1: 0px; /*width / sqrt(2)*/
+  --scale-y: 0.5774; /*Math.tan(30 * Math.PI/180)*/
+  --invert-scale-y: 1.7321; /*1 / scale_y*/
+  --hexa-left-1: 0px; /*(width - cap_width) / 2*/
+  --hexa-offset-1: 0px; /*width / sqrt(2) /2*/
+}
+
+.hexagon_1 {
+  position: relative;
+  width: var(--hexa-width-1); 
+  height: var(--hexa-height-1);
+  margin: var(--hexa-margin-1) 0;
+  background-size: auto var(--hexa-background-size-1);
+  background-position: center;
+}
+
+.hexTop_1,
+.hexBottom_1 {
+  position: absolute;
+  z-index: 1;
+  width: var(--hexa-cap-width-1);
+  height: var(--hexa-cap-width-1);
+  overflow: hidden;
+  -webkit-transform: scaleY(var(--scale-y)) rotate(-45deg);
+  -ms-transform: scaleY(var(--scale-y)) rotate(-45deg);
+  transform: scaleY(var(--scale-y)) rotate(-45deg);
+  background: inherit;
+  left: var(--hexa-left-1);
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop_1:after,
+.hexBottom_1:after {
+  content: "";
+  position: absolute;
+  width: var(--hexa-width-1);
+  height: var(--hexa-height-1);
+  -webkit-transform:  rotate(45deg) scaleY(var(--invert-scale-y)) translateY(var(--hexa-margin-negate-1));
+  -ms-transform:      rotate(45deg) scaleY(var(--invert-scale-y)) translateY(var(--hexa-margin-negate-1));
+  transform:          rotate(45deg) scaleY(var(--invert-scale-y)) translateY(var(--hexa-margin-negate-1));
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop_1 {
+  top: var(--hexa-offset-1);
+}
+
+.hexTop_1:after {
+  background-position: center top;
+}
+
+.hexBottom_1 {
+  bottom: var(--hexa-offset-1);
+}
+
+.hexBottom_1:after {
+  background-position: center bottom;
+}
+
+.hexagon_1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--hexa-width-1);
+  height: var(--hexa-height-1);
+  z-index: 2;
+  background: inherit;
+}
+
+.hexa-mt{
+	margin-top : 1px;
+}
+
+.hexa-mb{
+	margin-bottom : 1px;
+}

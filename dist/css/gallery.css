@@ -1,0 +1,27 @@
+.gallery_container{
+	width: 1800px;
+	height: 900px;
+    margin: 0 auto;
+	overflow : auto;
+}
+
+.background_container{
+	width: 1800px;
+	height: 900px;
+	background-color: white;
+    margin: 0 auto;
+	opacity : 0.5;
+}
+
+.gallery_container::-webkit-scrollbar {
+	width: 0px;
+}
+
+.gallery_element{
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	background-color: white;
+	opacity : 1;
+	cursor : pointer;
+}
