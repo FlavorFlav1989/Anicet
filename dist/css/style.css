@@ -1,5 +1,6 @@
 body{
-	background: linear-gradient(#202020, #696969);
+	/*background: linear-gradient(#202020, #696969);*/
+	background : black;
 }
 
 .wrap{
