@@ -1,3 +1,7 @@
+body{
+	background: linear-gradient(#202020, #696969);
+}
+
 .wrap{
 	margin-left: auto;
 	margin-right: auto;
@@ -99,7 +103,7 @@ a{
 
 .page1 {
   /* The image used */
-  background-image: url("../../images//image_part_002.jpg");
+  /*background-image: url("../../images//image_part_002.jpg");*/
 
 
   /* Full height */
@@ -112,7 +116,8 @@ a{
 }
 .page2 {
   /* The image used */
-  background-image: url("../../images//image_part_003.jpg");
+  /*background-image: url("../../images//image_part_003.jpg");*/
+
 
 
   /* Full height */
@@ -125,7 +130,8 @@ a{
 }
 .page3 {
   /* The image used */
-  background-image: url("../../images//image_part_004.jpg");
+  /*background-image: url("../../images//image_part_004.jpg");*/
+
 
 
   /* Full height */
@@ -138,7 +144,8 @@ a{
 }
 .page4 {
   /* The image used */
-  background-image: url("../../images//image_part_005.jpg");
+  /*background-image: url("../../images//image_part_005.jpg");*/
+
 
 
   /* Full height */
@@ -151,7 +158,8 @@ a{
 }
 .page5 {
   /* The image used */
-  background-image: url("../../images//image_part_005.jpg");
+ /* background-image: url("../../images//image_part_005.jpg");*/
+
 
 
   /* Full height */
@@ -164,7 +172,8 @@ a{
 }
 .page6 {
   /* The image used */
-  background-image: url("../../images//image_part_005.jpg");
+  /*background-image: url("../../images//image_part_005.jpg");*/
+
 
 
   /* Full height */
@@ -177,7 +186,8 @@ a{
 }
 .page7 {
   /* The image used */
-  background-image: url("../../images//image_part_006.jpg");
+  /*background-image: url("../../images//image_part_006.jpg");*/
+
 
 
   /* Full height */
