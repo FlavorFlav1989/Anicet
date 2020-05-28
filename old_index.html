@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>AniC</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+	<link href="dist/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link href="dist/css/hexagons.css" rel="stylesheet" type="text/css">
+	<link href="dist/css/modal.css" rel="stylesheet" type="text/css">
+	<link href="dist/css/gallery.css" rel="stylesheet" type="text/css">
+	<link href="dist/css/boardz.min.css" rel="stylesheet" type="text/css">
+	
+	<script src="dist/js/jquery.min.js"></script>
+	<script src="dist/js/popper.min.js"></script>
+	<script src="dist/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="dist/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="dist/js/create_gallery.js"></script>
+	<script type="text/javascript" src="dist/js/modal.js"></script>
+	<script type="text/javascript" src="dist/js/update_grid.js"></script>
+	<script type="text/javascript" src="dist/js/update_banniere.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.fn.fullpage({
+				slidesColor: ['#f2f2f2', '#be9fe1', '#c9b6e4', '#e1ccec', '#f1f1f6', '#f1f1f6'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage', 'contact']
+			});
+		});
+	</script>
+</head>
+<body>
+<!--Ancienne version
+	<ul id="menu">
+		<li class="li1" data-menuanchor="firstPage"><a href="#firstPage">First</a></li>
+		<li class="li2" data-menuanchor="secondPage"><a href="#secondPage">Second</a></li>
+		<li class="li3" data-menuanchor="3rdPage"><a href="#3rdPage">Third</a></li>
+		<li class="li4" data-menuanchor="4thpage"><a href="#4thpage">Fourth</a></li>
+		<li class="li5" data-menuanchor="lastPage"><a href="#lastPage">Fifth</a></li>
+	</ul>
+-->
+	<a id="click_down">
+		<img src="images/arrow4.gif" style="position : absolute; bottom : 5px; right : 10px; z-index : 2; width : 100px;" />
+	</a>
+	<div class="bg-text">
+		<h1>Expo 2020</h1>
+	</div>
+	<div id="fullpage">
+	<div class="section active background-filter" id="section0">
+		<div class="nom_assoc">
+			<a href="https://www.ecoliersdesphilippines.com/" target="_blank">
+				<img class="banniere" src="images/banniere.png" />
+			</a>
+		</div>
+		<div id="carbon-block" align="center"></div>
+	</div>
+	<div class="section background-filter" id="section1">
+		<div class="gallery_container" id="flux1">
+			<div class="boardz">
+					
+			</div>
+		</div>
+	<!--
+		<div class="hex-container">
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+			</div>
+			<div class="hex hex-img" style="background-image: url(dist//css//viet1.jpeg);">
+				<div class="corner-1"></div>
+				<div class="corner-2"></div>
+				<div class="corner-3"></div>
+				<p class="hide">Caption</p>
+			</div>
+		</div>
+		-->
+	</div>
+	<div class="section" id="section2">
+		<div class="gallery_container" id="flux2">
+			<div class="boardz">
+				<!-- First column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url(images//Enfancephilippine//DSC_0026.jpg)"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Enfancephilippine//DSC_0321.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Enfancephilippine//DSC_0324.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Second column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Enfancephilippine//DSC_0343.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Enfancephilippine//DSC_0412.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Enfancephilippine//DSC_0473.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Third column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Travaux//DSC_0074.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Travaux//DSC_0217.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Travaux//DSC_0229.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Fourth column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url(images//Travaux//DSC_0230.jpg)"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Travaux//DSC_0233.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Travaux//DSC_0256.jpg')"></div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="gallery_container" id="flux3">
+			<div class="boardz">
+				<!-- First column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url(images//Partage//DSC_0031.jpg)"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0035.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0043.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Second column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0050.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0058.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0066.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Third column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0072.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0118.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Fourth column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url(images//Partage//DSC_0149.jpg)"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0192.jpg')"></div>
+					</li>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Partage//DSC_0272.jpg')"></div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="gallery_container" id="flux4">
+			<div class="boardz">
+				<!-- First column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url(images//Merci//DSC_0246.jpg)"></div>
+					</li>
+				</ul>
+				<!-- Second column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Merci//DSC_0323.jpg')"></div>
+					</li>
+				</ul>
+				<!-- Third column -->
+				<ul>
+					<li>
+						<div class="gallery_element" style="background-image : url('images//Merci//DSC_0533.jpg')"></div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="nom_assoc">
+			<a href="https://www.ecoliersdesphilippines.com/" target="_blank">
+				<img class="banniere" src="images/banniere.png" />
+			</a>
+		</div>
+		<h1>Contact</h1>
+	</div>
+	</div>
+	<div id="myModal" class="modal">
+	  <span class="close">×</span>
+	  <img src="https://media.wired.com/photos/5926db217034dc5f91becd6b/master/w_1904,c_limit/so-logo-s.jpg" class="modal-content" id="img01">
+	  <div id="caption"></div>
+	</div>
+	
+</body>
+</html>

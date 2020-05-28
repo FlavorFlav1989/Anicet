@@ -15,7 +15,7 @@
 			"verticalCentered" : true,
 			'resize' : true,
 			'slidesColor' : [],
-			'anchors':[],
+			'anchors':['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage', 'contact'],
 			'scrollingSpeed': 700,
 			'easing': 'easeInQuart',
 			'menu': false,
@@ -26,7 +26,7 @@
 		}, options);
 
 		var isTablet = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/); 
-
+		
 		var windowsWidtdh = $(window).width();
 		var windowsHeight = $(window).height();
 		var isMoving = false;

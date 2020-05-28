@@ -1,4 +1,6 @@
-window.onload = function() { // add window.onload here and set it euqal to a function
+window.onload = init_modal();
+
+function init_modal(){
   // Get the modal
   var modal = document.getElementById('myModal');
   var modalImg = document.getElementById("img01");
@@ -14,14 +16,15 @@ window.onload = function() { // add window.onload here and set it euqal to a fun
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  
+	if(span != undefined){
+		 // When the user clicks on <span> (x), close the modal
+		  span.onclick = function() {
+			modal.style.display = "none";
+		  }
+	}
+ 
   document.body.addEventListener('click', function(){
 	if(!isOnImage)
 		modal.style.display = "none";
   }, true); 
-} // close the function
+}
