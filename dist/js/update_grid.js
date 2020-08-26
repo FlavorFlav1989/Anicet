@@ -317,5 +317,6 @@ function update_gallery_each(opt, type){
 }
 
 function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+ 	return (max - min) + min;
+  // return Math.random() * (max - min) + min;
 }
