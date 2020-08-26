@@ -23,8 +23,8 @@ function init_modal(){
 		  }
 	}
  
-  document.body.addEventListener('click', function(){
+}
+document.body.addEventListener('click', function(){
 	if(!isOnImage)
 		modal.style.display = "none";
   }, true); 
-}
