@@ -1,7 +1,12 @@
+var isOnDiv = false;
+var scrollPossibleDown = true;
+
 $( document ).ready(function() {
 	update_gallery()
 	update_grid_v2();
 	init_modal();
+	$(".gallery_container").mouseover(function(){console.log("in!"); isOnDiv=true;});
+	$(".gallery_container").mouseout(function(){isOnDiv=false;});
 });
 
 $( window ).resize(function() {
@@ -11,7 +16,7 @@ $( window ).resize(function() {
 });
 function set_img_height(opt){
 	$('.gallery_element').each(function(){
-		$(this).css('height', getRandomArbitrary(100, 400) + 'px');
+		$(this).css('height', getRandomArbitrary(100, 300) + 'px');
 	});
 	/*var max_height = $('.gallery_container').height();
 	console.log(max_height);
@@ -229,6 +234,9 @@ function update_gallery_all(opt){
 	update_gallery_each(opt, 4);
 	//update_gallery_each(opt, 5);
 }
+console.log($(".gallery_container"));
+
+
 function update_gallery_each(opt, type){
 	var folder = "";
 	var pack_img = [];
@@ -250,6 +258,8 @@ function update_gallery_each(opt, type){
 				break;
 	}
 	$('#flux' + type).find('.boardz').empty();
+	
+
 	if(opt == 1){
 		$('#flux' + type).find('.boardz').append("<ul id='col-" + type + "-1'></ul>");
 		$('#flux' + type).find('.boardz').append("<ul id='col-" + type + "-2'></ul>");
@@ -307,6 +317,5 @@ function update_gallery_each(opt, type){
 }
 
 function getRandomArbitrary(min, max) {
-	return (max - min) + min;
-  // return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
