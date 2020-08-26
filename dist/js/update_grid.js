@@ -1,7 +1,12 @@
+var isOnDiv = false;
+var scrollPossibleDown = true;
+
 $( document ).ready(function() {
 	update_gallery()
 	update_grid_v2();
 	init_modal();
+	$(".gallery_container").mouseover(function(){console.log("in!"); isOnDiv=true;});
+	$(".gallery_container").mouseout(function(){isOnDiv=false;});
 });
 
 $( window ).resize(function() {
@@ -229,6 +234,9 @@ function update_gallery_all(opt){
 	update_gallery_each(opt, 4);
 	//update_gallery_each(opt, 5);
 }
+console.log($(".gallery_container"));
+
+
 function update_gallery_each(opt, type){
 	var folder = "";
 	var pack_img = [];
@@ -250,6 +258,8 @@ function update_gallery_each(opt, type){
 				break;
 	}
 	$('#flux' + type).find('.boardz').empty();
+	
+
 	if(opt == 1){
 		$('#flux' + type).find('.boardz').append("<ul id='col-" + type + "-1'></ul>");
 		$('#flux' + type).find('.boardz').append("<ul id='col-" + type + "-2'></ul>");
