@@ -16,6 +16,7 @@
 
 !function($){
 
+	
   var defaults = {
     sectionContainer: "section",
     easing: "ease",
@@ -32,13 +33,12 @@
   
 	var bottom = false;
 	var scrtop = false;
-	
 
   /*------------------------------------------------*/
   /*  Credit: Eike Send for the awesome swipe event */
   /*------------------------------------------------*/
 
-  $.fn.swipeEvents = function() {
+  /*$.fn.swipeEvents = function() {
       return this.each(function() {
 
         var startX,
@@ -81,7 +81,7 @@
         }
 
       });
-    };
+    };*/
 
 
   $.fn.onepage_scroll = function(options){
@@ -96,6 +96,13 @@
         quietPeriod = 500,
         paginationList = "";
 
+	$( document ).ready(function() {
+		$("#button_down").click(function(){
+			
+		el.moveDown();
+		});
+	});
+	
     $.fn.transformPage = function(settings, pos, index) {
       if (typeof settings.beforeMove == 'function') settings.beforeMove(index);
 
