@@ -1,4 +1,4 @@
-#button_down{
+/*#button_down{
     position: absolute;
     bottom: -30px;
     left: 50%;
@@ -62,33 +62,18 @@
     box-sizing: border-box;
 }
 
-@-webkit-keyframes sdb03 {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+*/
+
+#button_down{
+	position: absolute;
+    bottom: 0px;
+    left: 50%;
 }
-@keyframes sdb03 {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+
+#button_up{
+	position: absolute;
+    top: 5px;
+    left: 50%;
+	display : none;
+	z-index : 1000;
 }

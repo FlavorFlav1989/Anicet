@@ -225,23 +225,27 @@ a{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 40%;
+  width: 65%;
   padding: 20px;
  text-align: center;
 }
 
 .bg-text h1 {
-	font-size : 16px;
-	font-size : 4vw;
+	font-size : 1px;
+	font-size : 5vw;
+	font-style: italic;
+	font-family: vollkorn;
 }
 
 .bg-text p {
-	font-size : 10px;
-	font-size : 1vw;
+	font-size : 30px; 
+	font-weight : lighter;
 	color: white;
-    text-align: Center;
+    text-align: left;
+	text-align : justify ;
     font-family: vollkorn;
     font-style: italic;
+	
 }
 
 .nom_assoc{
