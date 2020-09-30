@@ -98,8 +98,11 @@
 
 	$( document ).ready(function() {
 		$("#button_down").click(function(){
-			
-		el.moveDown();
+			el.moveDown();
+		});
+		
+		$("#button_up").click(function(){
+			el.moveUp();
 		});
 	});
 	
@@ -167,11 +170,17 @@
 		  }
 		  el.transformPage(settings, pos, next.data("index"));
 		}
+		if($(settings.sectionContainer +".active").data("index") > 1){
+			$("#button_up").show();
+		}
+		if($(settings.sectionContainer +".active").data("index") > 5){
+			$("#button_down").hide();
+		}
     }
 
     $.fn.moveUp = function() {
       var el = $(this);
-		  index = $(settings.sectionContainer +".active").data("index");
+		  index = $(settings.sectionContainer +".active").data("index");			  
 		if(!isOnDiv){
 		  current = $(settings.sectionContainer + "[data-index='" + index + "']");
 		  next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
@@ -205,7 +214,12 @@
 		  scrollPossibleUp = true;
 		scrollPossibleDown = true;
 	  }
-      
+		if($(settings.sectionContainer +".active").data("index") < 2){
+			$("#button_up").hide();
+		}
+		if($(settings.sectionContainer +".active").data("index") < 6){
+			$("#button_down").show();
+		}
     }
 
     $.fn.moveTo = function(page_index) {

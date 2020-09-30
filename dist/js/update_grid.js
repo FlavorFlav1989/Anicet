@@ -1,5 +1,7 @@
 var isOnDiv = false;
 var scrollPossibleDown = true;
+var hauteur = 250 ;
+   
 
 $( document ).ready(function() {
 	update_gallery()
@@ -16,7 +18,8 @@ $( window ).resize(function() {
 });
 function set_img_height(opt){
 	$('.gallery_element').each(function(){
-		$(this).css('height', getRandomArbitrary(100, 300) + 'px');
+		// $(this).css('height', getRandomArbitrary(100, 300) + 'px');
+		$(this).css('height', hauteur + 'px');					
 	});
 	/*var max_height = $('.gallery_container').height();
 	console.log(max_height);
@@ -185,13 +188,13 @@ function update_grid(){
 	}
 }
 
-var decouverte_img = ['124', '132', '139', '155',
-"\"De retour dans mon pays natal, l'un des pays les plus pauvres au monde, quelque chose m'a frappée. Ce n'était pas la pauvreté en elle-même, ni la saleté que j'avais oubliée, ni l'incroyable passivité de beaucoup face à la misère dont enfant, je ne me rendais pas vraiment compte. Non, ce qui m'a frappée avant tout, c'est la résilience, l'espoir et l'optimisme qui les animent, jour après jour.De retour dans mon pays natal, l'un des pays les plus pauvres au monde, quelque chose m'a frappée. Ce n'était pas la pauvreté en elle-même, ni la saleté que j'avais oubliée, ni l'incroyable passivité de beaucoup face à la misère dont enfant, je ne me rendais pas vraiment compte. Non, ce qui m'a frappée avant tout, c'est la résilience, l'espoir et l'optimisme qui les animent, jour après jour.\"",
+var decouverte_img = ['124', '132', '139', '202',
+"\“De retour dans mon pays natal, l'un des pays les plus pauvres au monde, quelque chose m'a frappée. Ce n'était pas la pauvreté en elle-même, ni la saleté que j'avais oubliée, ni l'incroyable passivité de beaucoup face à la misère dont enfant, je ne me rendais pas vraiment compte. Non, ce qui m'a frappée avant tout, c'est la résilience, l'espoir et l'optimisme qui les animent, jour après jour.”",
  '156', '160', 
 "\”Aux Philippines, on ressent partout cette atmosphère si particulière et ces bruits si caractéristiques. Des cocotiers à perte de vue, une chaleur étouffante, des attroupements d'enfants, des déchets plastiques, des matchs de basket, et des chiens errants. Mais aussi des échoppes remplies, des tuk-tuk à toutes épreuves, des élevages de coqs, des stands de brochettes, des maisons modestes, et des maisons insalubres.\”",
-'176', '187', '201', '202', 
+'176', '187',
 "\”Embarquer pour un tel voyage, c'est aussi accepter le voyage vers les autres, ouvrir les yeux sur ce qui les motive, leurs habitudes, leurs peurs. C'est oser se montrer sous un angle plus personnel, dévoiler ses forces tout autant que ses faiblesses. C'est sortir de sa zone de confort.\”", 
-'221', '347'];
+'221','201','155' , '347'];
 
 var travail_img = ['074', '217', '229', '230', '233',
 "\”Nous démarrons notre chantier de rénovation de la salle de classe avec l'espoir, un peu naïf, de ne pas perturber les leçons en cours dans les classes à proximité. Espoir de courte durée, au regard de ces petits yeux observateurs, et moyennement discrets, qui apparaissent régulièrement entre les fentes des fenêtres. Les écoliers les plus téméraires n'hésitent même pas à venir inspecter les travaux au plus près des travailleurs, et pas seulement lors de la pause récréation... \”Que peuvent bien faire ces étrangers, dans notre ancienne salle de travaux pratiques ?\”",
@@ -304,8 +307,9 @@ function update_gallery_each(opt, type){
 			div.css({"background-image" : url});
 		}
 		else{
-			var div = $('<div style="color : white; text-align : justify; font-family : vollkorn; font-style : italic;">');
+			var div = $('<div style="color : white; text-align : justify; font-size : 17px; font-family : vollkorn; font-style : italic;">');
 			$(div).text(pack_img[i]);
+			div.css({"height" : hauteur + 'px' });				 
 		}
 		$('#col-' + type + '-' + j).append($("<li>").append(div));
 		
